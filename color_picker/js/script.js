@@ -1,0 +1,1 @@
+console.log('JavaScript読み込みテスト')
