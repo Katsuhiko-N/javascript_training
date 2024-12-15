@@ -1,5 +1,5 @@
 body{
-    transition: 3s;
+    transition: 0.2s;
 }
 
 .darktheme{
@@ -10,7 +10,8 @@ body{
 btn{
     color: white;
     background-color: green;
-    padding: 1rem;
+    padding: 0.5rem;
+    border-radius: 20px;
     /*カーソル変更*/
     cursor: pointer;
 }
