@@ -14,4 +14,10 @@ btn.addEventListener('click', () => {
 
 text.addEventListener('keyup', () => {
     count.textContent = text.value.length;
+    
+    if(text.value.length >= 20){
+        count.classList.add('alert');
+    } else {
+        count.classList.remove('alert');
+    }
 });
