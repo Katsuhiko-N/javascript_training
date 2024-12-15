@@ -1,0 +1,16 @@
+body{
+    transition: 3s;
+}
+
+.darktheme{
+    background-color: black;
+    color: white;
+}
+
+btn{
+    color: white;
+    background-color: green;
+    padding: 1rem;
+    /*カーソル変更*/
+    cursor: pointer;
+}
