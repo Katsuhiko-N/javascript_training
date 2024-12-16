@@ -1,3 +1,4 @@
+/*以下ダークテーマ部分*/
 body{
     transition: 0.2s;
 }
@@ -16,6 +17,23 @@ btn{
     cursor: pointer;
 }
 
+/*以下入力文字数カウント部分*/
 .alert{
     color: red;
+}
+
+/*以下チェックボックス部分*/
+ck_label{
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+#btn_ck{
+    background-color: green;
+    color: white;
+}
+
+
+#btn_ck:disabled{
+    background-color: grey;
 }

@@ -1,6 +1,7 @@
+//　以下ダークテーマ部分
 const button = document.querySelector('#btn');
-const text = document.querySelector('#text');
-const count = document.querySelector('#count');
+
+
 
 btn.addEventListener('click', () => {
     document.body.classList.toggle('darktheme');
@@ -12,6 +13,10 @@ btn.addEventListener('click', () => {
     }
 });
 
+// 以下入力カウント部分
+const text = document.querySelector('#text');
+const count = document.querySelector('#count');
+
 text.addEventListener('keyup', () => {
     count.textContent = text.value.length;
     
@@ -21,3 +26,23 @@ text.addEventListener('keyup', () => {
         count.classList.remove('alert');
     }
 });
+
+
+// 以下チェックボックス部分
+const isAgreed = document.querySelector('#check')
+const btn_ck = document.querySelector('#btn_ck');
+
+isAgreed.addEventListener('change', () => {
+    console.log('チェックの変更を検出')
+    if (isAgreed.checked){
+        // チェック時の処理
+        btn_ck.disabled = false
+    }else{
+        // 未チェック時の処理
+        btn_ck.disabled = true
+    }
+})
+
+btn_ck.addEventListener('click', () => {
+    console.log('ボタンが押されました')
+})
