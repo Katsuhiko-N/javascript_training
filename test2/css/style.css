@@ -3,6 +3,12 @@ body{
     color: white;
 }
 
+#sc_btn{
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+}
+
 .hidden{
     visibility: hidden;
 }
@@ -12,3 +18,6 @@ body{
     color: white;
 }
 
+.main_contents{
+    height: 1200px;
+}
