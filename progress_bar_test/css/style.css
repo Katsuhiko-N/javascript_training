@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+    color: white;
+}
+#p_bar{
+    /*画面左上に固定*/
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10px;
+}
+
+#contents{
+    background-color: grey;
+    height: 2000px;
+    width: 60%;
+}
