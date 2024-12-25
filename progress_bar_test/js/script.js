@@ -12,18 +12,27 @@ const getScrollPercent = () => {
     
     // ＝${値}%;
     document.querySelector('#p_bar').style.width = `${percentage}%`;
+    
+    
+    // 背景色変更
+    if(scrolled < 100){
+        document.querySelector('body').style.backgroundColor = "black";
+    }else{
+        document.querySelector('body').style.backgroundColor = `rgba(${percentage},${percentage},0,1)`;
+    }
+    
 };
 
 window.addEventListener('scroll', getScrollPercent);
 
 
-
 // コンテンツ部分生成用
+
 const text = document.querySelector('.text_a');
 window.addEventListener('load', () =>{
-    console.log('文字列を生成')
+    console.log('文字列を生成');
     for(let i = 0; i < 80; i++){
         // 改行文字含めるならtextContentsではなくinnerText
         text.innerText += 'あいうえお\n';
-    };
+    }
 });
