@@ -11,12 +11,30 @@ bg_btn.addEventListener('click',() => {
 
 
 // ランダム生成テスト（サイコロ）
+const num_dice = document.querySelector('#num_dice');
 const num_dice_face = document.querySelector('#num_dice_face');
 const dice_btn = document.querySelector('#dice_btn');
 
-const dice = document.querySelector('#dice');
+let dice_faces = document.querySelector('#dice_faces');
+const total = document.querySelector('#total');
+
 
 dice_btn.addEventListener('click',() => {
-    const dice_return = Math.floor(Math.random()*(num_dice_face.value)) + 1;
-    dice.textContent = `${dice_return}`;
+    if(num_dice.value == ""){
+        dice_faces.textContent = "値が未入力です";
+        total.textContent = dice_faces.textContent;
+    }else if(num_dice_face.value == ""){
+        dice_faces.textContent = "値が未入力です";
+        total.textContent = dice_faces.textContent;
+    }else{
+        dice_faces.textContent = "";
+        let total_sum = 0;
+        for(let i = num_dice.value; i > 0; i--){
+            let face = Math.floor(Math.random()*(num_dice_face.value)) + 1;
+            dice_faces.textContent = dice_faces.textContent + " " + face;
+            total_sum = total_sum + face;
+        }
+        total.textContent = `${total_sum}`;
+    }
+    
 })
