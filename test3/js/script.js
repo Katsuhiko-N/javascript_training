@@ -18,8 +18,7 @@ const dice_btn = document.querySelector('#dice_btn');
 let dice_faces = document.querySelector('#dice_faces');
 const total = document.querySelector('#total');
 
-
-dice_btn.addEventListener('click',() => {
+const dice = ()=>{
     if(num_dice.value == ""){
         dice_faces.textContent = "値が未入力です";
         total.textContent = dice_faces.textContent;
@@ -34,7 +33,27 @@ dice_btn.addEventListener('click',() => {
             dice_faces.textContent = dice_faces.textContent + " " + face;
             total_sum = total_sum + face;
         }
-        total.textContent = `${total_sum}`;
+    total.textContent = `${total_sum}`;
+    }
+}
+
+dice_btn.addEventListener('click',dice);
+
+
+
+
+// 時間差ボタン
+const dice_btn_delay = document.querySelector('#dice_btn_delay');
+const delay = document.querySelector('#delay');
+
+
+
+dice_btn_delay.addEventListener('click',() =>{
+    if(delay.value == ""){
+        dice_faces.textContent = "ディレイ値が未入力です";
+        total.textContent = dice_faces.textContent;
+    }else{
+        let timer = window.setTimeout(dice,delay.value * 1000);
     }
     
-})
+});
