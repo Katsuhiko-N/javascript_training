@@ -1,0 +1,19 @@
+#d_area{
+    background-color: green;
+}
+
+#p_area{
+    background-color: skyblue;
+    margin-bottom: 30px;
+}
+
+.area{
+    width: 500px;
+    height: 100px;
+    color: white;
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
+}
