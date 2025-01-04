@@ -8,9 +8,10 @@
 }
 
 .area{
-    width: 500px;
-    height: 100px;
+    width: 400px;
+    height: 50px;
     color: white;
+    font-size: 30px;
 }
 
 .hide{
