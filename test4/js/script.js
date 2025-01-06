@@ -60,13 +60,11 @@ const game = () => {
         }
     };
     
-    let i = 0;
-    while(i < 2){
+    for(let i = 0; i < 2; i++){
         dc = draw(dc_total);
         d_card.textContent = d_card.textContent + ' ' + `${dc}`;
         dc_total = dc_total + dc;
         d_info.textContent = '合計は ' + `${dc_total}` + ' です';
-        i++;
     }
     
     pc = draw(pc_total);
@@ -76,10 +74,12 @@ const game = () => {
     
     // 勝負つくまで繰り返し
     btn_hit.addEventListener('click',() => {
+        info.textContent = "ヒット＝追加でカードを引く、チェック＝今のカードで勝負";
         pc = draw(pc_total);
         p_card.textContent = p_card.textContent + ' ' + `${pc}`;
         pc_total = pc_total + pc;
         p_info.textContent = '合計は ' + `${pc_total}` + ' です';
+        
         if(pc_total > 21){
             info.textContent = "21を超えました。あなたの負けです";
             btn_reset.classList.remove('hide');
@@ -125,14 +125,12 @@ const game = () => {
         d_card.textContent = '';
         
         info.textContent = "ヒット＝追加でカードを引く、チェック＝今のカードで勝負";
-
-        i = 0;
-        while(i < 2){
+        
+        for(let i = 0; i < 2; i++){
             dc = draw(dc_total);
             d_card.textContent = d_card.textContent + ' ' + `${dc}`;
             dc_total = dc_total + dc;
             d_info.textContent = '合計は ' + `${dc_total}` + ' です';
-            i++;
         }
         
         pc = draw(pc_total);
