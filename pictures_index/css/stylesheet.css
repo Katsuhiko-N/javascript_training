@@ -1,3 +1,9 @@
+h1{
+    font-family: "Hachi Maru Pop", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 body{
     text-align: center;
 }
@@ -5,6 +11,8 @@ body{
 #menu{
     display: grid;
     gap: 30px;
+    
+    /*autofitで親要素いっぱいに埋まるよう自動で配置（余り有）*/
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     max-width: 1020px;
     margin: auto;
