@@ -9,9 +9,27 @@ const keyframe1 = {
 };
 text.animate(keyframe1,1000);
 
-
-const keyframe2 = {
-    // 開始時360deg回ったところから戻る
-    rotate: ['360deg',0]
-};
-block.animate(keyframe2,1000);
+// 配列を使った記述
+const keyframe2 = [
+    {
+        // 開始時
+        // 360deg回ったところから戻る
+        rotate: '360deg'
+    },
+    {
+        // 終了時
+        // 0度で止める
+        rotate: 0
+    }
+    ];
+    
+    // オプションとして動きの詳細を指定可
+    const option1 = {
+        // 再生時間
+        duration: 5000,
+        // 変化速度
+        easing: 'cubic-bezier(.12,.44,.48,.96)'
+        
+    };
+    
+block.animate(keyframe2,option1);
