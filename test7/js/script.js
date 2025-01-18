@@ -32,7 +32,7 @@ const pictures = [
     
 let pic_num = 0;
 const{file,name} = pictures[pic_num];
-const pic_content = `<div><img class="pic" src="images/${file}.jpg"><p>${name}</p></div>`;
+const pic_content = `<div><img src="images/${file}.jpg"><p>${name}</p></div>`;
 
 btn_next.addEventListener('click',() => {
     if(pic_num < 4){
@@ -41,8 +41,8 @@ btn_next.addEventListener('click',() => {
         pic_num = 0;
     }
     const{file,name} = pictures[pic_num];
-    const pic_content = `<div><img class="pic" src="images/${file}.jpg"><p>${name}</p></div>`;
-    title_img.insertAdjacentHTML('beforeend',pic_content);
+    const pic_content = `<div><img src="images/${file}.jpg"><p>${name}</p></div>`;
+    title_img.innerHTML = pic_content;
     console.log(pic_num);
 });
 
@@ -54,7 +54,7 @@ btn_prev.addEventListener('click',() => {
     }
     const{file,name} = pictures[pic_num];
     const pic_content = `<div><img class="pic" src="images/${file}.jpg"><p>${name}</p></div>`;
-    title_img.insertAdjacentHTML('beforeend',pic_content);
+    title_img.innerHTML = pic_content;
     console.log(pic_num);
 });
 
