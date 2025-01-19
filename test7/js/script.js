@@ -1,3 +1,19 @@
+// ローディング画面部分
+const loading_window = document.querySelector('#loading_window');
+
+const contents = document.querySelector('#contents');
+
+// 画面の読み込み後、指定時間後に画面表示
+window.addEventListener('load', () => {
+    
+    window.setTimeout(() =>{
+        contents.classList.remove('hide');
+        loading_window.classList.add('hide');
+    },2000);
+});
+
+
+// 以下コンテンツ部分
 const title_img = document.querySelector('#title_img');
 const btn_prev = document.querySelector('#prev');
 const btn_next = document.querySelector('#next');
